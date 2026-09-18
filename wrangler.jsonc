@@ -1,0 +1,24 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "codex-reset-notify",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-18",
+  "compatibility_flags": ["nodejs_compat"],
+  "triggers": {
+    "crons": ["*/5 * * * *"]
+  },
+  "kv_namespaces": [
+    {
+      "binding": "STATE",
+      "id": "9db4d5e8be8d4bdcb162b4efa2260ae0"
+    }
+  ],
+  "vars": {
+    "API_URL": "https://aihot.news/api/v1/codex-resets",
+    "PROBABILITY_THRESHOLD": "0.5"
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+}

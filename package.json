@@ -1,0 +1,16 @@
+{
+  "name": "codex-reset-notify",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "npm test && wrangler deploy --dry-run",
+    "dev": "wrangler dev --test-scheduled",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.134.0"
+  }
+}
